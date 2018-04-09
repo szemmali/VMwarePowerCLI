@@ -34,8 +34,8 @@ while ($i -le $NumberToDeploy)
 	else
 		{
 		# USE COMMENT WHETHER TO USE HOST OR RESOURCE POOL
-    		#New-VM -Location $folderLoc -Template $template -Name $VMname -VMHost $esx -Datastore $ds -DiskStorageFormat Thin | Set-VM -NumCpu 2 -MemoryGB 4 -Confirm:$false 
-		New-VM -Location $folderLoc -Template $template -Name $VMname -ResourcePool $rp -Datastore $ds -DiskStorageFormat Thin | Set-VM -NumCpu 2 -MemoryGB 4 -Confirm:$false 
+    		#New-VM -Location $folderLoc -Template $template -Name $VMname -VMHost $esx -Datastore $ds -DiskStorageFormat Thin | Set-VM -NumCpu 2 -CoresPerSocket 2 -MemoryGB 4 -Confirm:$false 
+		New-VM -Location $folderLoc -Template $template -Name $VMname -ResourcePool $rp -Datastore $ds -DiskStorageFormat Thin | Set-VM -NumCpu 2 -CoresPerSocket 2 -MemoryGB 4 -Confirm:$false 
 		Sleep 10 #TO AVOID SUCCEEDING DISK I/O
 		}
 	$i++
