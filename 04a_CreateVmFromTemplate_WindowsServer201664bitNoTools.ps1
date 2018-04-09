@@ -7,7 +7,7 @@ $i = 1
 while ($i -le $NumberToDeploy)
 	{
 	$templateName = "Template Windows Server 2016 64bit notools" #CHANGEME-Source Template
-	$esxName = "ESXI01.DOMAIN.LOCAL" #CHANGME-Destination Host
+	$esxName = "ESXI01.DOMAIN.LOCAL" #CHANGEME-Destination Host
   	$rpName = "PRODUCTION" #CHANGEME-Destination Resource Pool
 	$dsName = "STORAGE01" #CHANGEME-Destination Datastore
   	$dsCluster = "STORAGECLUSTER" #CHANGEME-Destination Datastore Cluster
