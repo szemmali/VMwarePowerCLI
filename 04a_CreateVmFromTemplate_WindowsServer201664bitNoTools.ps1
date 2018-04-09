@@ -1,16 +1,16 @@
 # REPLACE THE VARIABLES WITH COMMENT "CHANGEME"
 $i = 1
 [int]$NumberToDeploy = 20 #CHANGEME-Max number to deploy
-[string]$NamingConvention = "FirstName LastName Windows Server 2016 64bit NoTools" #CHANGEME-Name prefix of VM to create
-[string]$folderLoc = "RDY-WindowsServer201664bit" #CHANGEME-VM Folder location to put the VMs
+[string]$NamingConvention = "FName LName Windows Server 2016 64bit NoTools" #CHANGEME-Name prefix of VM to create
+[string]$folderLoc = "Ready-WindowsServer201664bit" #CHANGEME-VM Folder location to put the VMs
 
 while ($i -le $NumberToDeploy)
 	{
 	$templateName = "Template Windows Server 2016 64bit notools" #CHANGEME-Source Template
-	$esxName = "cnode-nec01.tekchallenge.local" #CHANGME-Destination Host
-  	$rpName = "Production" #CHANGEME-Destination Resource Pool
-	$dsName = "STR-SAS01" #CHANGEME-Destination Datastore
-  	$dsCluster = "Support Services Storage" #CHANGEME-Destination Datastore Cluster
+	$esxName = "ESXI01.DOMAIN.LOCAL" #CHANGME-Destination Host
+  	$rpName = "PRODUCTION" #CHANGEME-Destination Resource Pool
+	$dsName = "STORAGE01" #CHANGEME-Destination Datastore
+  	$dsCluster = "STORAGECLUSTER" #CHANGEME-Destination Datastore Cluster
 	
   	$VMname = $NamingConvention + $i
 	$template = Get-Template -Name $templateName
