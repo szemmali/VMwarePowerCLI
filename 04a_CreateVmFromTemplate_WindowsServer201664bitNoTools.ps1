@@ -1,3 +1,5 @@
+# CREDITS TO: https://www.shogan.co.uk/vmware/powercli-script-to-deploy-multiple-random-vms/
+
 # REPLACE THE VARIABLES WITH COMMENT "CHANGEME"
 $i = 1
 [int]$NumberToDeploy = 20 #CHANGEME-Max number to deploy
