@@ -17,8 +17,8 @@ Foreach ($vm in $vmViolate)
 	$newName = $vm.Name -replace '/','_'
 	$newName = $newName -replace '\|','_'
 	$newName = $newName -replace '\:',''
-    $newName = $newName -replace [regex]::escape('[');
-    $newName = $newName -replace [regex]::escape(']');
+    	$newName = $newName -replace [regex]::escape('[');
+    	$newName = $newName -replace [regex]::escape(']');
 	Write-Host "     New Name ---" $newName -ForegroundColor Yellow
 	Set-VM $vm.Name -Name $newName -Confirm:$false > $null
 	}
