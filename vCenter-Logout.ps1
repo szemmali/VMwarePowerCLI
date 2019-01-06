@@ -2,7 +2,7 @@
 
 function vCenter-Logout
 {
-$server = "cs-vcsa01.tekchallenge.local"
+$server = "VCENTER_FQDN"
 Disconnect-VIServer -Server $server -Confirm:$false
 }
 
